@@ -21,7 +21,7 @@ func callHello() {
 
 	// the login path
 	// this is configurable, change userpass to ldap etc
-	path := "secret/sample/hello"
+	path := os.Args[1]
 
 	// PUT call to get a token
 	secret, err := client.Logical().Read(path)
